@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Bateristas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .carousel-item img {
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+            margin: 0 auto; 
+        }
+        .navbar {
+            font-size: 0.9rem;
+        }
+        .nav-link {
+            font-size: 0.9rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<header> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Site sobre Baterias</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="hamburgueria.html">Hamburgueria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Quem somos.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Produtos.html">História do instrumento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Contato.html">Voltar</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container mt-5">
+        <h1>Formulário de Contato</h1>
+        <form action="#" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required class="form-control mb-3">
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required class="form-control mb-3">
+            
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" class="form-control mb-3">
+            
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" class="form-control mb-3">
+            
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" class="form-control mb-3">
+            
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required class="form-control mb-3">
+            
+            <label for="como_conheceu">Como você nos conheceu?</label>
+            <select id="como_conheceu" name="como_conheceu" class="form-select mb-3">
+                <option value="internet">Internet</option>
+                <option value="amigo">Amigo</option>
+                <option value="redes_sociais">Redes Sociais</option>
+                <option value="anuncio_tv">Anúncio na TV</option>
+                <option value="radio">Rádio</option>
+                <option value="evento">Evento</option>
+                <option value="revista">Jornal</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="outro">Outro</option>
+            </select>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" class="form-control mb-3"></textarea>
+            
+            <label for="novidades">
+                <input type="checkbox" id="novidades" name="novidades"> Gostaria de receber novidades por e-mail?
+            </label>
+            
+            <fieldset class="mt-3">
+                <legend>Avaliação do Serviço:</legend>
+                <label><input type="radio" name="avaliacao" value="1"> 1</label>
+                <label><input type="radio" name="avaliacao" value="2"> 2</label>
+                <label><input type="radio" name="avaliacao" value="3"> 3</label>
+                <label><input type="radio" name="avaliacao" value="4"> 4</label>
+                <label><input type="radio" name="avaliacao" value="5"> 5</label>
+            </fieldset>
+            
+            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+    </div>
+</main>
+
+<footer class="text-center mt-5">
+    © 2024 Site sobre Baterias. Todos os direitos reservados.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+<script>
+    function mostrarTexto(mensagem) {
+        document.getElementById('resultado').innerText = mensagem;
+    }
+</script>
+
+</body>
+</html>
