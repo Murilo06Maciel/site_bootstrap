@@ -1,0 +1,72 @@
+header {
+    background-color: black;
+    color: beige;
+    text-align: center;
+    font-size: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 40pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+    width: 90%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+label, input, select, textarea, button, fieldset {
+    display: block; 
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+input[type="radio"], input[type="checkbox"] {
+    display: inline-block; 
+    width: auto;
+    margin-right: 10px; 
+}
+
+fieldset {
+    border: 1px solid beige; 
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+button {
+    width: auto; 
+    padding: 10px 20px;
+    background-color: gray;
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: gray; 
+}
+
+footer {
+    background-color: gray;
+    color: beige;
+    text-align: center;
+    font-size: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
