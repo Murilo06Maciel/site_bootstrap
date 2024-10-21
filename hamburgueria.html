@@ -130,22 +130,8 @@
 <script>
     document.querySelector('#search-form').addEventListener('submit', function(event) {
         event.preventDefault(); 
-        const searchTerm = document.querySelector('input[type="search"]').value.toLowerCase(); 
-        const productList = document.getElementById('product-list');
-        const products = productList.getElementsByTagName('li');
-        productList.innerHTML = '';
-
-        for (let i = 0; i < products.length; i++) {
-            const productName = products[i].textContent.toLowerCase();
-            if (productName.includes(searchTerm)) {
-                const newItem = document.createElement('li');
-                newItem.textContent = products[i].textContent;
-                productList.appendChild(newItem);
-            }
-        }
-        if (productList.innerHTML === '') {
-            productList.innerHTML = '<li>Nenhum resultado encontrado.</li>';
-        }
+        const searchTerm = document.querySelector('input[type="search"]').value; 
+        window.location.href = `resultado.html?query=${encodeURIComponent(searchTerm)}`;
     });
 </script>
 
