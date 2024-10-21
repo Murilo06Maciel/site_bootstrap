@@ -130,8 +130,8 @@
 <script>
     document.querySelector('#search-form').addEventListener('submit', function(event) {
         event.preventDefault(); 
-        const searchTerm = document.querySelector('input[type="search"]').value; // Armazena o termo de busca
-        window.location.href = `resultado.html?query=${encodeURIComponent(searchTerm)}`; // Redireciona para a nova página
+        const searchTerm = document.querySelector('input[type="search"]').value;
+        window.location.href = `resultado.html?query=${encodeURIComponent(searchTerm)}`; 
     });
 </script>
 
