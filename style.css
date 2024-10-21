@@ -6,8 +6,12 @@ header {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: linear-gradient(red 0%, black 100%);
+}
+
 main {
-    background-color: white;
+    background-color: gray;
     color: black;
     text-align: center;
     font-size: 40pt;

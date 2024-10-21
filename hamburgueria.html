@@ -7,27 +7,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      .carousel-item img {
-        width: 100%;
-        height: auto; 
-        max-height: 80vh; 
-        object-fit: contain;
-          margin: 0 auto;
-      }
-      .navbar {
-          font-size: 1rem;
-      }
-      .nav-link {
-          font-size: 1rem;
-      }
-      h1 {
-          font-size: 1.5rem;
-      }
-  </style>
-
+        .carousel-item img {
+            width: 100%;
+            height: auto; 
+            max-height: 80vh; 
+            object-fit: contain;
+            margin: 0 auto;
+        }
+        .navbar {
+            font-size: 1rem;
+        }
+        .nav-link {
+            font-size: 1rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Hamburgueria</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,51 +47,108 @@
                     <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <form class="d-flex" role="search" id="search-form">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
         </div>
     </div>
 </nav>
-    <div class="container text-center">
-        <h1>Bem-vindo à Hamburgueria!</h1>
-        <p>Os melhores lanches da cidade. Confira nossos produtos!</p>
-    </div>
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+
+<div class="container text-center">
+    <h1>Bem-vindo à Hamburgueria!</h1>
+    <p>Os melhores lanches da cidade. Confira nossos produtos!</p>
+</div>
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/restaurante.webp" class="d-block w-100" alt="restaurante">
+            <img src="img/restaurante.webp" class="d-block w-100" alt="restaurante">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/pessoas.webp" class="d-block w-100" alt="pessoas">
+            <img src="img/pessoas.webp" class="d-block w-100" alt="pessoas">
         </div>
         <div class="carousel-item active" data-bs-interval="2000">
-          <img src="img/hamburguer.webp" class="d-block w-100" alt="hamburguer">
+            <img src="img/hamburguer.webp" class="d-block w-100" alt="hamburguer">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/batata.webp" class="d-block w-100" alt="batata frita">
+            <img src="img/batata.webp" class="d-block w-100" alt="batata frita">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/porções.webp" class="d-block w-100" alt="porção">
+            <img src="img/porções.webp" class="d-block w-100" alt="porção">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/bebida.webp" class="d-block w-100" alt="porção">
+            <img src="img/bebida.webp" class="d-block w-100" alt="bebida">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/água.webp" class="d-block w-100" alt="porção">
+            <img src="img/água.webp" class="d-block w-100" alt="água">
         </div>        
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </button>
+</div>
+
+<div class="container">
+    <h2>Produtos</h2>
+    <ul id="product-list">
+        <h3>Hambúrgueres</h3>
+        <li>Cheeseburger Tradicional</li>
+        <li>Bacon Burger</li>
+        <li>Veggie Burger</li>
+        <li>Duplo Smash Burger</li>
+        <li>Chicken Burger</li>
+
+        <h3>Batatas Fritas</h3>
+        <li>Porção 100g</li>
+        <li>Porção 200g</li>
+        <li>Porção 300g</li>
+        <li>Porção 400g</li>
+
+        <h3>Porções Variadas</h3>
+        <li>Anéis de Cebola</li>
+        <li>Nuggets de Frango</li>
+        <li>Asinha de Frango</li>
+        <li>Chilli Fries</li>
+
+        <h3>Bebidas</h3>
+        <li>Coca-Cola</li>
+        <li>Guaraná Antarctica</li>
+        <li>Fanta Laranja</li>
+        <li>Sprite</li>
+        <li>Água Mineral</li>
+        <li>Suco de Laranja</li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelector('#search-form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const searchTerm = document.querySelector('input[type="search"]').value.toLowerCase(); 
+        const productList = document.getElementById('product-list');
+        const products = productList.getElementsByTagName('li');
+        productList.innerHTML = '';
+
+        for (let i = 0; i < products.length; i++) {
+            const productName = products[i].textContent.toLowerCase();
+            if (productName.includes(searchTerm)) {
+                const newItem = document.createElement('li');
+                newItem.textContent = products[i].textContent;
+                productList.appendChild(newItem);
+            }
+        }
+        if (productList.innerHTML === '') {
+            productList.innerHTML = '<li>Nenhum resultado encontrado.</li>';
+        }
+    });
+</script>
+
 <footer class="text-center mt-5">
     © 2024 Hamburgueria. Todos os direitos reservados.
 </footer>
