@@ -95,43 +95,43 @@
 </div>
 
 <div class="container">
-  <ul id="product-list" style="display: none;">
-    <h2>Produtos</h2>
-      <h3>Hambúrgueres</h3>
-      <li>Cheeseburger Tradicional</li>
-      <li>Bacon Burger</li>
-      <li>Veggie Burger</li>
-      <li>Duplo Smash Burger</li>
-      <li>Chicken Burger</li>
+    <ul id="product-list" style="display: none;"> 
+      <h2>Produtos</h2>
+        <h3>Hambúrgueres</h3>
+        <li>Cheeseburger Tradicional</li>
+        <li>Bacon Burger</li>
+        <li>Veggie Burger</li>
+        <li>Duplo Smash Burger</li>
+        <li>Chicken Burger</li>
 
-      <h3>Batatas Fritas</h3>
-      <li>Porção 100g</li>
-      <li>Porção 200g</li>
-      <li>Porção 300g</li>
-      <li>Porção 400g</li>
+        <h3>Batatas Fritas</h3>
+        <li>Porção 100g</li>
+        <li>Porção 200g</li>
+        <li>Porção 300g</li>
+        <li>Porção 400g</li>
 
-      <h3>Porções Variadas</h3>
-      <li>Anéis de Cebola</li>
-      <li>Nuggets de Frango</li>
-      <li>Asinha de Frango</li>
-      <li>Chilli Fries</li>
+        <h3>Porções Variadas</h3>
+        <li>Anéis de Cebola</li>
+        <li>Nuggets de Frango</li>
+        <li>Asinha de Frango</li>
+        <li>Chilli Fries</li>
 
-      <h3>Bebidas</h3>
-      <li>Coca-Cola</li>
-      <li>Guaraná Antarctica</li>
-      <li>Fanta Laranja</li>
-      <li>Sprite</li>
-      <li>Água Mineral</li>
-      <li>Suco de Laranja</li>
-  </ul>
+        <h3>Bebidas</h3>
+        <li>Coca-Cola</li>
+        <li>Guaraná Antarctica</li>
+        <li>Fanta Laranja</li>
+        <li>Sprite</li>
+        <li>Água Mineral</li>
+        <li>Suco de Laranja</li>
+    </ul>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     document.querySelector('#search-form').addEventListener('submit', function(event) {
         event.preventDefault(); 
-        const searchTerm = document.querySelector('input[type="search"]').value; 
-        window.location.href = `resultado.html?query=${encodeURIComponent(searchTerm)}`;
+        const searchTerm = document.querySelector('input[type="search"]').value; // Armazena o termo de busca
+        window.location.href = `resultado.html?query=${encodeURIComponent(searchTerm)}`; // Redireciona para a nova página
     });
 </script>
 
