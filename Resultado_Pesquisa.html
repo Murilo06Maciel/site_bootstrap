@@ -3,51 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados da Busca</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Resultado da Pesquisa</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Resultados da Busca</h1>
-        <ul id="result-list"></ul>
-    </div>
+    <h1>Resultados da Pesquisa</h1>
+    <p id="search-result"></p>
 
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const query = params.get('query');
-
-        const productList = [
-            "Cheeseburger Tradicional",
-            "Bacon Burger",
-            "Veggie Burger",
-            "Duplo Smash Burger",
-            "Chicken Burger",
-            "Porção 100g",
-            "Porção 200g",
-            "Porção 300g",
-            "Porção 400g",
-            "Anéis de Cebola",
-            "Nuggets de Frango",
-            "Asinha de Frango",
-            "Chilli Fries",
-            "Coca-Cola",
-            "Guaraná Antarctica",
-            "Fanta Laranja",
-            "Sprite",
-            "Água Mineral",
-            "Suco de Laranja"
-        ];
-
-        const resultList = document.getElementById('result-list');
-        const results = productList.filter(product => product.toLowerCase().includes(query.toLowerCase()));
-
-        if (results.length === 0) {
-            resultList.innerHTML = '<li>Nenhum resultado encontrado.</li>';
-        } else {
-            results.forEach(result => {
-                const li = document.createElement('li');
-                li.textContent = result;
-                resultList.appendChild(li);
-            });
-        }
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('query');
+        document.getElementById('search-result').textContent = `Você pesquisou por: ${searchQuery}`;
     </script>
+</body>
+</html>
