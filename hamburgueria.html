@@ -3,144 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburgueria - Página Principal</title>
+    <title>Produtos - Hamburgueria</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .carousel-item img {
-            width: 100%;
-            height: auto; 
-            max-height: 80vh; 
-            object-fit: contain;
-            margin: 0 auto;
-        }
-        .navbar {
-            font-size: 1rem;
-        }
-        .nav-link {
-            font-size: 1rem;
-        }
-        h1 {
-            font-size: 1.5rem;
-        }
-    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hamburgueria</a>
-        <img src="img/Brown Illustration Burger Food Logo.png" class="d-block" alt="Logo" style="height: 50px; width: auto; max-width: 150px;">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="hamburgueria.html">Hamburgueria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="Quem somos.html">Quem Somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="Produtos.html">Produtos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search" id="search-form">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hamburgueria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="hamburgueria.html">Hamburgueria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Quem somos.html">Quem Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="text-center mb-4">Hambúrgueres</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/hamburguer.webp" class="card-img-top" alt="Cheeseburger Tradicional">
+                    <div class="card-body">
+                        <h5 class="card-title">Cheeseburger Tradicional</h5>
+                        <p class="card-text">Pão, hambúrguer de carne bovina 180g, queijo, alface, tomate, cebola e molho especial.</p>
+                        <span class="text-primary">R$ 24,90</span>
+                        <a href="comprar.html?produto=Cheeseburger%20Tradicional&preco=24.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="cheeseburger.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/hamburguer.webp" class="card-img-top" alt="Bacon Burger">
+                    <div class="card-body">
+                        <h5 class="card-title">Bacon Burger</h5>
+                        <p class="card-text">Pão, hambúrguer de carne bovina 180g, queijo, bacon crocante, cebola caramelizada e maionese de alho.</p>
+                        <span class="text-primary">R$ 29,90</span>
+                        <a href="comprar.html?produto=Bacon%20Burger&preco=29.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="baconBurguer.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/hamburguer.webp" class="card-img-top" alt="Veggie Burger">
+                    <div class="card-body">
+                        <h5 class="card-title">Veggie Burger</h5>
+                        <p class="card-text">Pão integral, hambúrguer de grão-de-bico, alface, tomate, cenoura ralada e molho de ervas.</p>
+                        <span class="text-primary">R$ 22,90</span>
+                        <a href="comprar.html?produto=Veggie%20Burger&preco=22.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="veggieBurguer.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/hamburguer.webp" class="card-img-top" alt="Duplo Smash Burger">
+                    <div class="card-body">
+                        <h5 class="card-title">Duplo Smash Burger</h5>
+                        <p class="card-text">Pão, dois hambúrgueres smash 100g cada, queijo cheddar, picles e molho especial.</p>
+                        <span class="text-primary">R$ 32,90</span>
+                        <a href="comprar.html?produto=Duplo%20Smash%20Burger&preco=32.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="DsmashBurguer.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/hamburguer.webp" class="card-img-top" alt="Chicken Burger">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken Burger</h5>
+                        <p class="card-text">Pão, filé de frango empanado, queijo cheddar, alface, tomate e maionese artesanal.</p>
+                        <span class="text-primary">R$ 26,90</span>
+                        <a href="comprar.html?produto=Chicken%20Burger&preco=26.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="chickenBurger.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mb-4">Batatas Fritas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/batata.webp" class="card-img-top" alt="Porção Batata 100g">
+                    <div class="card-body">
+                        <h5 class="card-title">Porção Batata 100g</h5>
+                        <p class="card-text">Batata frita tradicional.</p>
+                        <span class="text-primary">R$ 8,90</span>
+                        <a href="comprar.html?produto=Por%C3%A7%C3%A3o%20100g&preco=8.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="porção100.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/batata.webp" class="card-img-top" alt="Porção Batata 200g">
+                    <div class="card-body">
+                        <h5 class="card-title">Porção Batata 200g</h5>
+                        <p class="card-text">Batata frita tradicional.</p>
+                        <span class="text-primary">R$ 14,90</span>
+                        <a href="comprar.html?produto=Por%C3%A7%C3%A3o%20200g&preco=14.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="porção200.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/batata.webp" class="card-img-top" alt="Porção Batata 300g">
+                    <div class="card-body">
+                        <h5 class="card-title">Porção Batata 300g</h5>
+                        <p class="card-text">Batata frita tradicional.</p>
+                        <span class="text-primary">R$ 19,90</span>
+                        <a href="comprar.html?produto=Por%C3%A7%C3%A3o%20300g&preco=19.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="porção300.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mb-4">Bebidas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/suco.webp" class="card-img-top" alt="Suco de Laranja">
+                    <div class="card-body">
+                        <h5 class="card-title">Suco de Laranja</h5>
+                        <p class="card-text">Suco natural de laranja.</p>
+                        <span class="text-primary">R$ 7,00</span>
+                        <a href="comprar.html?produto=Suco%20de%20Laranja&preco=7.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="sucoLaranja.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/refrigerante.webp" class="card-img-top" alt="Refrigerante Lata">
+                    <div class="card-body">
+                        <h5 class="card-title">Refrigerante Lata</h5>
+                        <p class="card-text">Escolha entre os sabores: Coca-Cola, Guaraná e Fanta.</p>
+                        <span class="text-primary">R$ 5,00</span>
+                        <a href="comprar.html?produto=Refrigerante%20Lata&preco=5.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="refrigeranteLata.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/agua.webp" class="card-img-top" alt="Água Mineral">
+                    <div class="card-body">
+                        <h5 class="card-title">Água Mineral</h5>
+                        <p class="card-text">Água mineral sem gás.</p>
+                        <span class="text-primary">R$ 3,00</span>
+                        <a href="comprar.html?produto=%C3%81gua%20Mineral&preco=3.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="aguaMineral.html" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
 
-<div class="container text-center">
-    <h1>Bem-vindo à Hamburgueria!</h1>
-    <p>Os melhores lanches da cidade. Confira nossos produtos!</p>
-</div>
-
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/Brown Illustration Burger Food Logo.png" class="d-block w-100" alt="restaurante">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/restaurante.webp" class="d-block w-100" alt="restaurante">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/pessoas.webp" class="d-block w-100" alt="pessoas">
-        </div>
-        <div class="carousel-item active" data-bs-interval="2000">
-            <img src="img/hamburguer.webp" class="d-block w-100" alt="hamburguer">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/batata.webp" class="d-block w-100" alt="batata frita">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/porções.webp" class="d-block w-100" alt="porção">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/bebida.webp" class="d-block w-100" alt="bebida">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/água.webp" class="d-block w-100" alt="água">
-        </div>        
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
-<div class="container">
-    <ul id="product-list" style="display: none;"> 
-      <h2>Produtos</h2>
-        <h3>Hambúrgueres</h3>
-        <li>Cheeseburger Tradicional</li>
-        <li>Bacon Burger</li>
-        <li>Veggie Burger</li>
-        <li>Duplo Smash Burger</li>
-        <li>Chicken Burger</li>
-
-        <h3>Batatas Fritas</h3>
-        <li>Porção 100g</li>
-        <li>Porção 200g</li>
-        <li>Porção 300g</li>
-        <li>Porção 400g</li>
-
-        <h3>Porções Variadas</h3>
-        <li>Anéis de Cebola</li>
-        <li>Nuggets de Frango</li>
-        <li>Asinha de Frango</li>
-        <li>Chilli Fries</li>
-
-        <h3>Bebidas</h3>
-        <li>Coca-Cola</li>
-        <li>Guaraná Antarctica</li>
-        <li>Fanta Laranja</li>
-        <li>Sprite</li>
-        <li>Água Mineral</li>
-        <li>Suco de Laranja</li>
-    </ul>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.querySelector('#search-form').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        const searchTerm = document.querySelector('input[type="search"]').value;
-        window.location.href = `resultado.html?query=${encodeURIComponent(searchTerm)}`; 
-    });
-</script>
-
-<footer class="text-center mt-5">
-    © 2024 Hamburgueria. Todos os direitos reservados.
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
