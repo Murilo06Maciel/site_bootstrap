@@ -7,7 +7,7 @@ header {
 }
 
 body {
-    background: linear-gradient(to right, red, black);
+    background-color: rgb(63, 57, 57);
     height: 100vh;
     margin: 0;
 }
