@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Hamburgueria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            font-size: 1rem;
+            background-color: black;
+        }
+        .navbar .navbar-brand {
+            color: white !important;
+        }
+        .nav-link {
+            font-size: 1rem;
+            color: white !important;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        body {
+            background-color: rgb(167, 165, 163);
+            height: 100vh;
+            margin: 0;
+        }
+        h1, h2, h3, p {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  bg-dark text-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hamburgueria</a>
+            <img src="img/Brown Illustration Burger Food Logo.png" class="d-block" alt="Logo" style="height: 50px; width: auto; max-width: 150px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="hamburgueria.html">Hamburgueria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Quem somos.html">Quem Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Cardápio.html">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <nav aria-label="breadcrumb" class="container mt-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="hamburgueria.html">Início</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cardápio</li>
+        </ol>
+    </nav>
+        <h2 class="text-center mb-4">Bebidas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/suco.webp" class="card-img-top" alt="Suco de Laranja">
+                    <div class="card-body">
+                        <h5 class="card-title">Suco de Laranja</h5>
+                        <p class="card-text">Suco natural de laranja.</p>
+                        <span class="text-primary">R$ 7,00</span>
+                        <a href="comprar.html?produto=Suco%20de%20Laranja&preco=7.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Suco%20de%20Laranja&descricao=Suco%20natural%20e%20refrescante%20preparado%20com%20laranjas%20frescas.&preco=R$7,00&imagem=img/suco.webp&ingredientes=laranjas%20frescas,%20água,%20açúcar" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/água.webp" class="card-img-top" alt="Água Mineral">
+                    <div class="card-body">
+                        <h5 class="card-title">Água Mineral</h5>
+                        <p class="card-text">Água mineral natural, sem gás.</p>
+                        <span class="text-primary">R$ 3,00</span>
+                        <a href="comprar.html?produto=Água%20Mineral&preco=3.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Água%20Mineral&descricao=Água%20mineral%20natural%20sem%20gás%20para%20uma%20opção%20leve%20e%20refrescante.&preco=R$3,00&imagem=img/água.webp&ingredientes=água%20mineral" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/coca-cola.webp" class="card-img-top" alt="Água Mineral">
+                    <div class="card-body">
+                        <h5 class="card-title">Coca-Cola</h5>
+                        <p class="card-text">Refrigerante Coca-Cola gelado.</p>
+                        <span class="text-primary">R$ 5,00</span>
+                        <a href="comprar.html?produto=Coca-Cola&preco=5.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Coca-Cola&descricao=Refrigerante%20Coca-Cola%20gelado.%20O%20sabor%20refrescante%20e%20icônico.%20Perfeito%20para%20acompanhar%20seu%20lanche.&preco=R$5,00&imagem=img/coca-cola.webp" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <img src="img/guaraná.webp" class="card-img-top" alt="Água Mineral">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Guaraná</h5>
+                        <p class="card-text">Refrigerante Guaraná gelado.</p>
+                        <span class="text-primary">R$ 5,00</span>
+                        <a href="comprar.html?produto=Guaraná&preco=5.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Guaraná&descricao=Refrigerante%20Guaraná%20gelado.%20Refrescante%20e%20energético.%20Uma%20opção%20exótica%20para%20acompanhar%20seu%20lanche.&preco=R$5,00&imagem=img/guaraná.webp" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <img src="img/fanta.webp" class="card-img-top" alt="Água Mineral">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Fanta</h5>
+                        <p class="card-text">Refrigerante Fanta gelado.</p>
+                        <span class="text-primary">R$ 5,00</span>
+                        <a href="comprar.html?produto=Fanta&preco=5.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Fanta&descricao=Refrigerante%20Fanta%20gelado.%20Um%20sabor%20frutado%20e%20refrescante%20para%20seus%20momentos%20de%20descontração.&preco=R$5,00&imagem=img/fanta.webp" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <img src="img/sprite.webp" class="card-img-top" alt="Água Mineral">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sprite</h5>
+                        <p class="card-text">Refrigerante Sprite gelado.</p>
+                        <span class="text-primary">R$ 5,00</span>
+                        <a href="comprar.html?produto=Sprite&preco=5.00" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Sprite&descricao=Refrigerante%20Sprite%20gelado.%20Refrescante%20com%20sabor%20de%20limão%20e%20lima.&preco=R$5,00&imagem=img/sprite.webp" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
