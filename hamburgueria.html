@@ -36,85 +36,109 @@
         h1, h2, h3, p {
             color: black;
         }
-
+        .dropdown-menu {
+            background-color: white; /* Cor de fundo do dropdown */
+            border: 1px solid black; /* Borda do dropdown */
+        }
+        .dropdown-menu .dropdown-item {
+            color: black; /* Cor do texto do dropdown */
+        }
+        .dropdown-menu .dropdown-item:hover {
+            color: white; /* Cor do texto ao passar o mouse */
+            background-color: black; /* Fundo ao passar o mouse */
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg  bg-dark text-white">
+    <nav class="navbar navbar-expand-lg bg-dark text-white">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hamburgueria</a>
-        <img src="img/Brown Illustration Burger Food Logo.png" class="d-block" alt="Logo" style="height: 50px; width: auto; max-width: 150px;">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#">Hamburgueria</a>
+            <img src="img/Brown Illustration Burger Food Logo.png" class="d-block" alt="Logo" style="height: 50px; width: auto; max-width: 150px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="hamburgueria.html">Hamburgueria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Quem somos.html">Quem Somos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Gretsch.html">Hamburguer</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Odery.html">Batatas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Dw.html">Porções</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Nagano.html">Bebidas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Cardápio.html">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" id="search-form">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h1>Bem-vindo à Hamburgueria!</h1>
+        <p>Os melhores lanches da cidade. Confira nossos produtos!</p>
+    </div>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/Brown Illustration Burger Food Logo.png" class="d-block w-100" alt="Logo">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/restaurante.webp" class="d-block w-100" alt="restaurante">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/pessoas.webp" class="d-block w-100" alt="pessoas">
+            </div>
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="img/hamburguer.webp" class="d-block w-100" alt="hamburguer">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/batata.webp" class="d-block w-100" alt="batata frita">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/porções.webp" class="d-block w-100" alt="porção">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/bebida.webp" class="d-block w-100" alt="bebida">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/água.webp" class="d-block w-100" alt="água">
+            </div>        
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="hamburgueria.html">Hamburgueria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="Quem somos.html">Quem Somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="Cardápio.html">Cardápio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search" id="search-form">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-        </div>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-</nav>
 
-<div class="container text-center">
-    <h1>Bem-vindo à Hamburgueria!</h1>
-    <p>Os melhores lanches da cidade. Confira nossos produtos!</p>
-</div>
-
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/Brown Illustration Burger Food Logo.png" class="d-block w-100" alt="Logo">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/restaurante.webp" class="d-block w-100" alt="restaurante">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/pessoas.webp" class="d-block w-100" alt="pessoas">
-        </div>
-        <div class="carousel-item active" data-bs-interval="2000">
-            <img src="img/hamburguer.webp" class="d-block w-100" alt="hamburguer">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/batata.webp" class="d-block w-100" alt="batata frita">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/porções.webp" class="d-block w-100" alt="porção">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/bebida.webp" class="d-block w-100" alt="bebida">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="img/água.webp" class="d-block w-100" alt="água">
-        </div>        
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<footer class="text-center mt-5">
-    © 2024 Hamburgueria. Todos os direitos reservados.
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="text-center mt-5">
+        © 2024 Hamburgueria. Todos os direitos reservados.
+    </footer>
 </body>
 </html>
