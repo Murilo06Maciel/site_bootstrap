@@ -8,13 +8,20 @@ header {
 .navbar {
     background-color: black; 
 }
+
 .navbar .nav-link {
     color: white !important; 
 }
+
 .navbar .nav-link:hover {
     color: white !important;
 }
 
+.card.custom-card {
+    background-color: black;
+    color: white;
+}
+ 
 body {
     background-color: rgb(165, 8, 8);
     height: 100vh;
