@@ -66,6 +66,9 @@
                     <li class="nav-item">
                         <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="carrinho.html">Carrinho</a>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search" id="search-form">
                     <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
@@ -84,7 +87,7 @@
     <div class="container mt-5">
         <h1 class="text-center">Carrinho de Compras</h1>
         <div id="carrinho" class="mt-4"></div>
-        <div id="total" class="text-end mt-4"></div>
+        <input type="text" id="total" class="form-control text-end mt-4" readonly>
         <button class="btn btn-success mt-4" id="finalizarCompraBtn">Finalizar Compra</button>
     </div>
 
@@ -96,7 +99,7 @@
 
             if (carrinho.length === 0) {
                 carrinhoContainer.innerHTML = '<p class="text-center">Seu carrinho está vazio.</p>';
-                document.getElementById('total').innerHTML = '';
+                document.getElementById('total').value = ''; // Limpa o total
                 return;
             }
 
@@ -114,7 +117,7 @@
                 total += item.preco * item.quantidade;
             });
 
-            document.getElementById('total').innerHTML = `Total: R$ ${total.toFixed(2)}`;
+            document.getElementById('total').value = `Total: R$ ${total.toFixed(2)}`; // Atualiza o valor na caixa de texto
 
             // Adiciona evento de remover
             document.querySelectorAll('.remover-item').forEach(button => {
