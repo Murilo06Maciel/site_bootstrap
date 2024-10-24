@@ -110,8 +110,12 @@
         document.getElementById('produtoPreco').textContent = `Preço: R$ ${preco}`;
 
         document.getElementById('compraForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Aqui você pode adicionar lógica para finalizar a compra
+            event.preventDefault(); // Previne o envio padrão do formulário
+            const confirmacao = confirm('Você deseja finalizar a compra?');
+            if (confirmacao) {
+                alert('Pedido enviado com sucesso!');
+                window.location.href = 'carrinho.html'; // Redireciona para a página do carrinho
+            }
         });
 
         document.getElementById('addCarrinhoBtn').addEventListener('click', function() {

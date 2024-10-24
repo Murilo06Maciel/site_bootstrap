@@ -67,49 +67,80 @@
                         <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
                     </li>
                 </ul>
+                <form class="d-flex" role="search" id="search-form">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </div>
         </div>
     </nav>
+    <nav aria-label="breadcrumb" class="container mt-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="hamburgueria.html">Início</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Carrinho</li>
+        </ol>
+    </nav>
+
     <div class="container mt-5">
-        <h1 class="text-center">Carrinho</h1>
-        <div id="carrinho" class="card">
-            <div class="card-body">
-                <h5 class="card-title">Itens no Carrinho:</h5>
-                <ul id="listaCarrinho" class="list-group mb-3"></ul>
-                <h5>Total: R$ <span id="total">0.00</span></h5>
-                <button class="btn btn-success" id="finalizarCompra">Finalizar Compra</button>
-            </div>
-        </div>
+        <h1 class="text-center">Carrinho de Compras</h1>
+        <div id="carrinho" class="mt-4"></div>
+        <div id="total" class="text-end mt-4"></div>
+        <button class="btn btn-success mt-4" id="finalizarCompraBtn">Finalizar Compra</button>
     </div>
 
     <script>
         function atualizarCarrinho() {
             const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            const listaCarrinho = document.getElementById('listaCarrinho');
-            const totalElement = document.getElementById('total');
-            listaCarrinho.innerHTML = '';
-            let total = 0;
+            const carrinhoContainer = document.getElementById('carrinho');
+            carrinhoContainer.innerHTML = '';
 
+            if (carrinho.length === 0) {
+                carrinhoContainer.innerHTML = '<p class="text-center">Seu carrinho está vazio.</p>';
+                document.getElementById('total').innerHTML = '';
+                return;
+            }
+
+            let total = 0;
             carrinho.forEach(item => {
-                const li = document.createElement('li');
-                li.className = 'list-group-item d-flex justify-content-between align-items-center';
-                li.innerHTML = `${item.nome} - R$ ${item.preco.toFixed(2)} (x${item.quantidade}) 
-                                <button class="btn btn-danger btn-sm" onclick="removerItem('${item.nome}')">Remover</button>`;
-                listaCarrinho.appendChild(li);
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('card', 'mb-2');
+                itemElement.innerHTML = `
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <span>${item.nome} (R$ ${item.preco.toFixed(2)} x ${item.quantidade})</span>
+                        <button class="btn btn-danger btn-sm remover-item" data-nome="${item.nome}">Remover</button>
+                    </div>
+                `;
+                carrinhoContainer.appendChild(itemElement);
                 total += item.preco * item.quantidade;
             });
 
-            totalElement.textContent = total.toFixed(2);
+            document.getElementById('total').innerHTML = `Total: R$ ${total.toFixed(2)}`;
+
+            // Adiciona evento de remover
+            document.querySelectorAll('.remover-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const nome = this.getAttribute('data-nome');
+                    const index = carrinho.findIndex(item => item.nome === nome);
+                    if (index !== -1) {
+                        carrinho.splice(index, 1);
+                        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                        atualizarCarrinho();
+                    }
+                });
+            });
         }
 
-        function removerItem(nome) {
-            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            carrinho = carrinho.filter(item => item.nome !== nome);
-            localStorage.setItem('carrinho', JSON.stringify(carrinho));
-            atualizarCarrinho();
-        }
+        document.getElementById('finalizarCompraBtn').addEventListener('click', function() {
+            if (confirm('Você deseja finalizar a compra?')) {
+                alert('Compra finalizada com sucesso!');
+                localStorage.removeItem('carrinho'); // Limpa o carrinho após finalizar
+                atualizarCarrinho(); // Atualiza a visualização do carrinho
+                window.location.href = 'hamburgueria.html'; // Redireciona para a página inicial
+            }
+        });
 
-        document.addEventListener('DOMContentLoaded', atualizarCarrinho);
+        // Atualiza o carrinho ao carregar a página
+        atualizarCarrinho();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
