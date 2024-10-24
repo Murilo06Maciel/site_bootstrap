@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprar - Hamburgueria</title>
+    <title>Carrinho - Hamburgueria</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -18,13 +18,8 @@
             font-size: 1rem;
             color: white !important;
         }
-        h1 {
-            font-size: 1.5rem;
-        }
         body {
             background-color: rgb(167, 165, 163) !important;
-            height: 100vh;
-            margin: 0;
         }
         h1, h2, h3, p {
             color: black;
@@ -67,74 +62,49 @@
                         <a class="nav-link custom-nav-link" href="Contato.html">Contato</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search" id="search-form">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
             </div>
         </div>
     </nav>
-    <nav aria-label="breadcrumb" class="container mt-4">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="hamburgueria.html">Início</a></li>
-            <li class="breadcrumb-item"><a href="Cardápio.html">Cardápio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Comprar</li>
-        </ol>
-    </nav>
-
     <div class="container mt-5">
-        <h1 class="text-center">Finalizar Compra</h1>
-        <div class="card">
+        <h1 class="text-center">Carrinho</h1>
+        <div id="carrinho" class="card">
             <div class="card-body">
-                <h5 id="produtoNome" class="card-title"></h5>
-                <p id="produtoPreco" class="card-text"></p>
-                <form id="compraForm">
-                    <div class="mb-3">
-                        <label for="quantidade" class="form-label">Quantidade</label>
-                        <input type="number" class="form-control" id="quantidade" name="quantidade" value="1" min="1">
-                    </div>
-                    <button type="submit" class="btn btn-success">Comprar</button>
-                    <button type="button" class="btn btn-secondary" id="addCarrinhoBtn">Adicionar ao Carrinho</button>
-                </form>
+                <h5 class="card-title">Itens no Carrinho:</h5>
+                <ul id="listaCarrinho" class="list-group mb-3"></ul>
+                <h5>Total: R$ <span id="total">0.00</span></h5>
+                <button class="btn btn-success" id="finalizarCompra">Finalizar Compra</button>
             </div>
         </div>
     </div>
 
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const produto = params.get('produto');
-        const preco = params.get('preco');
+        function atualizarCarrinho() {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const listaCarrinho = document.getElementById('listaCarrinho');
+            const totalElement = document.getElementById('total');
+            listaCarrinho.innerHTML = '';
+            let total = 0;
 
-        document.title = `Comprar - ${produto}`;
-        document.getElementById('produtoNome').textContent = produto;
-        document.getElementById('produtoPreco').textContent = `Preço: R$ ${preco}`;
+            carrinho.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                li.innerHTML = `${item.nome} - R$ ${item.preco.toFixed(2)} (x${item.quantidade}) 
+                                <button class="btn btn-danger btn-sm" onclick="removerItem('${item.nome}')">Remover</button>`;
+                listaCarrinho.appendChild(li);
+                total += item.preco * item.quantidade;
+            });
 
-        document.getElementById('compraForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Aqui você pode adicionar lógica para finalizar a compra
-        });
+            totalElement.textContent = total.toFixed(2);
+        }
 
-        document.getElementById('addCarrinhoBtn').addEventListener('click', function() {
-            const quantidade = parseInt(document.getElementById('quantidade').value);
-            const item = {
-                nome: produto,
-                preco: parseFloat(preco),
-                quantidade: quantidade
-            };
-
+        function removerItem(nome) {
             let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            const existingItemIndex = carrinho.findIndex(i => i.nome === produto);
-
-            if (existingItemIndex !== -1) {
-                carrinho[existingItemIndex].quantidade += quantidade;
-            } else {
-                carrinho.push(item); 
-            }
+            carrinho = carrinho.filter(item => item.nome !== nome);
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+        }
 
-            alert('Produto adicionado ao carrinho com sucesso!');
-            window.location.href = 'carrinho.html'; // Redireciona para a página do carrinho
-        });
+        document.addEventListener('DOMContentLoaded', atualizarCarrinho);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
