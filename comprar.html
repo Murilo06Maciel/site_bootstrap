@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos - Hamburgueria</title>
+    <title>Comprar - Hamburgueria</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -29,7 +29,6 @@
         h1, h2, h3, p {
             color: black;
         }
-
     </style>
 </head>
 <body>
@@ -82,26 +81,20 @@
             <li class="breadcrumb-item active" aria-current="page">Comprar</li>
         </ol>
     </nav>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprar - Hamburgueria</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+
     <div class="container mt-5">
         <h1 class="text-center">Finalizar Compra</h1>
         <div class="card">
             <div class="card-body">
                 <h5 id="produtoNome" class="card-title"></h5>
                 <p id="produtoPreco" class="card-text"></p>
-                <form>
+                <form id="compraForm">
                     <div class="mb-3">
                         <label for="quantidade" class="form-label">Quantidade</label>
                         <input type="number" class="form-control" id="quantidade" name="quantidade" value="1" min="1">
                     </div>
                     <button type="submit" class="btn btn-success">Comprar</button>
+                    <button type="button" class="btn btn-secondary" id="addCarrinhoBtn">Adicionar ao Carrinho</button>
                 </form>
             </div>
         </div>
@@ -112,12 +105,34 @@
         const produto = params.get('produto');
         const preco = params.get('preco');
 
-        console.log('Produto:', produto);
-        console.log('Preço:', preco);
-
         document.title = `Comprar - ${produto}`;
         document.getElementById('produtoNome').textContent = produto;
         document.getElementById('produtoPreco').textContent = `Preço: R$ ${preco}`;
+
+        document.getElementById('compraForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+        });
+
+        document.getElementById('addCarrinhoBtn').addEventListener('click', function() {
+            const quantidade = parseInt(document.getElementById('quantidade').value);
+            const item = {
+                nome: produto,
+                preco: parseFloat(preco),
+                quantidade: quantidade
+            };
+
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const existingItemIndex = carrinho.findIndex(i => i.nome === produto);
+
+            if (existingItemIndex !== -1) {
+                carrinho[existingItemIndex].quantidade += quantidade;
+            } else {
+                carrinho.push(item); 
+            }
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+            alert('Produto adicionado ao carrinho com sucesso!');
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
