@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Hamburgueria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            font-size: 1rem;
+            background-color: black;
+        }
+        .navbar .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        body {
+            background-color: rgb(167, 165, 163);
+            height: 100vh;
+            margin: 0;
+        }
+        h1, h2, h3, p {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark text-white">
+        <div class="container-fluid">
+            <img src="img/Brown Illustration Burger Food Logo.png" class="d-block" alt="Logo" style="height: 50px; width: auto; max-width: 150px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="hamburgueria.html">Hamburgueria</a></li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="Quem somos.html">Quem Somos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Produtos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Lanches.html">Lanches</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Batatas.html">Batatas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Porções.html">Porções</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Bebidas.html">Bebidas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Sobremesas.html">Sobremesas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="Cardápio.html">Cardápio</a></li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="Contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="carrinho.html">Carrinho</a></li>
+                </ul>
+                <form class="d-flex" role="search" id="search-form">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" name="query">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <nav aria-label="breadcrumb" class="container mt-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="hamburgueria.html">Início</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sobremesas</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Sobremesas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/milkshake.jpeg" class="card-img-top" alt="Milkshake 500ml">
+                    <div class="card-body">
+                        <h5 class="card-title">Milkshake 500ml</h5>
+                        <p class="card-text">Uma deliciosa bebida gelada com sabor de sua escolha.</p>
+                        <span class="text-primary">R$ 18,90</span>
+                        <a href="comprar.html?produto=Milkshake%20500ml&preco=18.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Milkshake%20500ml&descricao=Bebida%20gelada%20de%20500ml%20com%20opções%20de%20sabores%20chocolate,%20morango%20ou%20baunilha.&preco=R$18,90&imagem=img/milkshake.jpeg" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/acai.jpeg" class="card-img-top" alt="Açaí 250ml">
+                    <div class="card-body">
+                        <h5 class="card-title">Açaí 250ml</h5>
+                        <p class="card-text">Delicioso açaí com opções de adicionais para personalizar ao seu gosto.</p>
+                        <span class="text-primary">R$ 15,90</span>
+                        <a href="comprar.html?produto=Açaí%20250ml&preco=15.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Açaí%20250ml&descricao=Açaí%20de%20250ml%20com%20adicionais%20à%20escolha,%20como%20granola%20e%20frutas.&preco=R$15,90&imagem=img/acai.jpeg" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/sorvete.jpeg" class="card-img-top" alt="Sorvete 250ml">
+                    <div class="card-body">
+                        <h5 class="card-title">Sorvete 250ml</h5>
+                        <p class="card-text">Sorvete cremoso em sabores de chocolate, morango ou baunilha.</p>
+                        <span class="text-primary">R$ 10,90</span>
+                        <a href="comprar.html?produto=Sorvete%20250ml&preco=10.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Sorvete%20250ml&descricao=Sorvete%20cremoso%20em%20porção%20de%20250ml%20com%20sabores%20variados.&preco=R$10,90&imagem=img/sorvete.jpeg" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div id="carouselPicolés" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/p-choco.jpg" class="d-block w-100" alt="Picolés - Chocolate">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/p-morango.jpg" class="d-block w-100" alt="Picolés - Morango">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/p-flocos.jpg" class="d-block w-100" alt="Picolés - Flocos">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/p-coco.jpg" class="d-block w-100" alt="Picolés - Coco">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/p-limao.jpg" class="d-block w-100" alt="Picolés - Limão">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/p-uva.jpg" class="d-block w-100" alt="Picolés - Uva">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselPicolés" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselPicolés" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Picolés</h5>
+                        <p class="card-text">Diversos sabores: chocolate, morango, limão, coco, entre outros.</p>
+                        <span class="text-primary">R$ 5,90</span>
+                        <a href="comprar.html?produto=Picolés&preco=5.90" class="btn btn-success mt-2">Comprar</a>
+                        <a href="saiba_mais.html?nome=Picolés&descricao=Picolés%20em%20diversos%20sabores%20para%20refrescar%20seu%20dia.%20Sabores:%20chocolate,%20morango,%20brigadeiro,%20limão,%20mini-saia,%20coco,%20flocos,%20uva.&preco=R$5,90&imagem=img/picole.jpeg" class="btn btn-info mt-2">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="text-center mt-5">
+        © 2024 Hamburgueria. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
